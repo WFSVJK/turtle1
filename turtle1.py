@@ -1,7 +1,10 @@
 import turtle
-turtle.showturtle()
-turtle.forward(100)
-for x in range(3):
-    turtle.forward(50)
-    turtle.left(120)
-#Comment..
+turtle.shape("turtle")
+turtle.forward(50)
+turtle.right(90)
+turtle.forward(50)
+turtle.right(90)
+turtle.forward(50)
+turtle.right(90)
+turtle.forward(50)
+turtle.right(90)
