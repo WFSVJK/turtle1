@@ -20,16 +20,35 @@ def draw_square ():
     input ()
 def draw_triangle ():
     print ("printing Triangle")
-    
+    turtle.shape("turtle")
+    turtle.forward(100)
+    turtle.right(120)
+    turtle.forward(100)
+    turtle.right(120)
+    turtle.forward(100)
+    print ("Check the Drawing ....hit Enter to continue")
+    input ()
+
 def draw_circle ():
     print ("printing circle")
+    turtle.shape("turtle")
+    turtle.pencolor('red')
+    turtle.circle(70)
+    input ()
+    
 def draw_star ():
     print ("printing star")
+    for i in range(5):
+        turtle.forward(150)
+        turtle.right(144)
+    print("Check the Drawing ....hit Enter to continue")
+    input()
+
 
 
 #---------------------------------------------------------------
 print("\n----- Welcome to Vijay's TurtlePlay application ----")
-print("----- Chose a Shape to draw ------------------------")
+print("----- Choose a Shape to draw ------------------------")
 print("""
 Square          - Press 1 
 Triangle        - Press 2
@@ -42,7 +61,7 @@ input_number = input()
 if not input_number == "0":
     #Getting the first number and converting from string to int
     if input_number == "1": 
-        print(f"\nprinting Sqqure ....")
+        print(f"\nprinting Square ....")
         draw_square ()
     elif input_number == "2": 
         print(f"\nprint triangle")
