@@ -7,7 +7,6 @@
 import turtle
 #----------------differnt functions to draw differnt shapes -----
 def draw_square ():
-    print ("printing square")
     turtle.shape("turtle")
     turtle.forward(100)
     turtle.right(90)
@@ -17,7 +16,7 @@ def draw_square ():
     turtle.right(90)
     turtle.forward(100)
     turtle.right(90)
-    print ("enter to continue")
+    print ("Check the Drawing ....hit Enter to continue")
     input ()
 def draw_triangle ():
     print ("printing Triangle")
@@ -29,20 +28,21 @@ def draw_star ():
 
 
 #---------------------------------------------------------------
-print("----- Draw different Shapes ----")
+print("\n----- Welcome to Vijay's TurtlePlay application ----")
+print("----- Chose a Shape to draw ------------------------")
 print("""
-Square         - Press 1 Triangle    - Press 2
-Circle         - Press 3 xx        - Press 4
-Exit           - Press 0
+Square          - Press 1 
+Triangle        - Press 2
+Circle          - Press 3 
+Star            - Press 4
+Exit            - Press 0
 """)
 input_number = input()
 
 if not input_number == "0":
     #Getting the first number and converting from string to int
-    print("\nEnter number 1: ", end=" ")
-    num1 = int(input())
     if input_number == "1": 
-        print(f"\nprint sequre")
+        print(f"\nprinting Sqqure ....")
         draw_square ()
     elif input_number == "2": 
         print(f"\nprint triangle")
