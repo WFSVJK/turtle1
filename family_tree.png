@@ -1,0 +1,6 @@
+digraph G {
+	Sathiya -> Parents
+	Seetha -> Parents
+	Parents -> Kids
+	Kids -> Vijay
+}

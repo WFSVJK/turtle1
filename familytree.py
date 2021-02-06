@@ -1,8 +1,5 @@
-ls l#!/usr/bin/env python
+#!/usr/bin/env python
 # coding: utf-8
-
-# In[50]:
-
 
 class Parent():
     def __init__(self, name):
@@ -40,8 +37,6 @@ class Parent():
         return desc
 
 
-# In[51]:
-
 
 class Family():
     def __init__(self, parent_1, parent_2):
@@ -65,10 +60,6 @@ class Family():
             self.add_child(child)
         self.children = self.parent_1.children
         
-
-
-# In[52]:
-
 
 class Pet():
     def __init__(self, name, animal_type, person_close_to):
@@ -128,21 +119,13 @@ class Child():
         return f"Child({self.name})"
 
 
-# In[ ]:
-
-
-
-
-
-# In[27]:
-
-
 parent_1 = Parent(input("Enter a parent's name: "))
 parent_2 = Parent(input("Enter another parent's name: "))
 fam = Family(parent_1, parent_2)
 
 characters = [parent_1, parent_2]
 
+# ---- Adding Children ---
 print("\n\nAdding children")
 choice = input("ADD?? Enter Y to add child or N to go to the next step: ")
 while(choice == "Y"):
@@ -152,15 +135,7 @@ while(choice == "Y"):
     choice = input("ADD?? Enter Y to keep adding children or N to go to the next step: ")
 
 
-# In[28]:
-
-
-fam.children
-
-
-# In[29]:
-
-
+# --- Addming Friends -----
 print("\n\nAdding friends")
 if fam.children:
     choice = input("ADD?? Enter Y to add a friend or N to go to the next step: ")
@@ -178,9 +153,7 @@ if fam.children:
         
 
 
-# In[30]:
-
-
+# -----  Adding Pets ------
 print("\n\nAdding Pets")
 choice = input("ADD?? Enter Y to add pet or N to go to the RELATIONSHIP SUMMARY: ")
 while(choice == "Y"):
@@ -191,48 +164,11 @@ while(choice == "Y"):
     characters.append(pet)
 
 
-    
-
-
-# In[49]:
-
 
 for character in characters:
     print(character)
 
-
-# In[10]:
-
-
-# parent_1 = Parent("Sathiya Krishnan")
-# parent_2 = Parent("Seetha Krishnan")
-# fam = Family(parent_1, parent_2)
-
-# fam.children
-
-# vijay = Child("Vijay Krishnan")
-# uma = Child("Uma Krishnan")
-# fam.add_children([vijay, uma])
-
-# fam.children
-
-# milo = Pet("Milo", "Dog", parent_1)
-# fam.add_pet(milo)
-
-# misha = Child("Misha")
-# misha.add_friend(vijay)
-# jake = Child("Jake")
-# jake.add_friend(vijay)
-
-# poorvi = Child("Poorvi")
-# poorvi.add_friend(uma)
-# nina = Child("Nina")
-# nina.add_friend(uma)
-
-
-# In[47]:
-
-
+# --- use Digraph for directional arrows for graphs --
 from graphviz import Digraph
 
 g = Digraph('G', filename='process.gv', engine='sfdp')
@@ -256,13 +192,12 @@ if len(fam.pets):
         g.edge('Pets',pet.name)
 
 
-# In[48]:
+# ---- Generate the family out tree in PDF form and display on the conole ---
+g.render('family_tree.png', view=True)
 
 
-g
-
-
-# In[ ]:
-
+# ----------------------------
+# -------   END PROGRAM  -----
+# ----------------------------
 
 
