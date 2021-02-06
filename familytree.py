@@ -1,5 +1,9 @@
-#!/usr/bin/env python
-# coding: utf-8
+# -------------------------------------------------------
+#. Engineering Class - Woodberry Forest
+#. VIjay Krishnan.   Python Assignment #3 - Family Tree
+#
+# Sample program to draw family tree based on user input
+# -------------------------------------------------------
 
 class Parent():
     def __init__(self, name):
